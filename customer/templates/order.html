@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<body style="background-color: rgb(181, 168, 168);">
+<h3 class="bg-warning text-center">PRODUCTS</h3>
+
+<form action=""  method="post" enctype="multipart/form-data" class="text-center">
+   {%csrf_token%}
+ 
+  <table class="text-light bg-dark" style="align-items: center;">
+
+    {{form.as_p}}
+
+    <a href="{% url 'chome' %}" button class="btn btn-primary">Order</button></a>
+   </table>
+  </form>
+   
+ 
+
+
+</body>
+
+{% endblock content %}
